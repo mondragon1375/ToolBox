@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ToolBox</string>
+    <string-array name="spinnerEx">
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+    </string-array>
+</resources>
