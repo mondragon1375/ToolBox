@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<resources>
-    <demens name = "textPadding">30dp</demens>
-    <demens name = "textSizeTitle">26sp</demens>
-    <demens name = "textSize">18sp</demens>
-
-</resources>
