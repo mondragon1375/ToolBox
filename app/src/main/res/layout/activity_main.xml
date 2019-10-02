@@ -4,53 +4,177 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="30dp"
+    android:paddingHorizontal="@dimen/horizontalPadding"
+    android:paddingVertical="@dimen/verticalPadding"
     tools:context=".MainActivity">
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="140dp"
-        android:layout_height="260dp"
-        android:layout_marginTop="48dp"
-        android:padding="20dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_message"
-        app:srcCompat="@drawable/thing"
-        android:onClick="sendOnChannel1"/>
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="140dp"
-        android:layout_height="260dp"
-        android:layout_marginTop="64dp"
-        android:padding="20dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/thing"
-        android:onClick="sendOnChannel2"/>
 
     <EditText
         android:id="@+id/edit_text_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Title"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="@dimen/textWidth"
+        android:layout_height="@dimen/textHeight"
+        android:layout_marginVertical="@dimen/nextItemMargin"
+        android:hint="Notification Title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edit_text_message"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Message"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="@dimen/textWidth"
+        android:layout_height="@dimen/textHeight"
+        android:layout_marginVertical="@dimen/nextItemMargin"
+        android:hint="Notification Message"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_title" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="@dimen/imageWidth"
+        android:layout_height="@dimen/imageHeight"
+        android:onClick="sendNotification"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/thing" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="120dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="@dimen/itemWidth"
+        android:layout_height="@dimen/itemHeight"
+        android:layout_marginStart="@dimen/horizontalPadding"
+        android:layout_marginTop="@dimen/verticalPadding"
+        android:text="@string/checkbox1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline1" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="@dimen/itemWidth"
+        android:layout_height="@dimen/itemHeight"
+        android:layout_marginVertical="@dimen/nextItemMargin"
+        android:layout_marginTop="@dimen/nextItemMargin"
+        android:text="@string/checkbox2"
+        app:layout_constraintStart_toStartOf="@+id/checkBox1"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="@dimen/itemWidth"
+        android:layout_height="@dimen/itemHeight"
+        android:layout_marginVertical="@dimen/nextItemMargin"
+        android:layout_marginTop="@dimen/nextItemMargin"
+        android:text="@string/checkbox3"
+        app:layout_constraintStart_toStartOf="@+id/checkBox1"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+
+    <Button
+        android:id="@+id/buttonCheck"
+        android:layout_width="@dimen/itemWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/nextItemMargin"
+        android:onClick="addListenerCheck"
+        android:text="Check "
+        app:layout_constraintStart_toStartOf="@+id/checkBox1"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/verticalPadding"
+        android:layout_marginEnd="@dimen/verticalPadding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline1">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="@dimen/itemWidth"
+            android:layout_height="@dimen/itemHeight"
+            android:text="@string/radiobtn1" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="@dimen/itemWidth"
+            android:layout_height="@dimen/itemHeight"
+            android:layout_marginTop="@dimen/nextItemMargin"
+            android:text="@string/radiobtn2" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="@dimen/itemWidth"
+            android:layout_height="@dimen/itemHeight"
+            android:layout_marginTop="@dimen/nextItemMargin"
+            android:text="@string/radiobtn3" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonRadio"
+        android:layout_width="@dimen/itemWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/nextItemMargin"
+        android:onClick="addListenerRadio"
+        android:text="Radio "
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="330dp" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="@dimen/itemWidth"
+        android:layout_height="@dimen/itemHeight"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/horizontalPadding"
+        android:text="@string/switch1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="@dimen/itemWidth"
+        android:layout_height="@dimen/itemHeight"
+        android:layout_marginTop="@dimen/nextItemMargin"
+        app:layout_constraintStart_toStartOf="@+id/switch1"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSwitch" />
+
+    <Button
+        android:id="@+id/buttonSpinner"
+        android:layout_width="@dimen/itemWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/nextItemMargin"
+        android:text="@string/spinner1"
+        app:layout_constraintStart_toStartOf="@+id/switch1"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <Button
+        android:id="@+id/buttonSwitch"
+        android:layout_width="@dimen/itemWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/nextItemMargin"
+        android:text="Switch "
+        app:layout_constraintStart_toStartOf="@+id/switch1"
+        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        android:onClick="addListenerSwitch"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

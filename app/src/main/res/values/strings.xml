@@ -1,8 +1,16 @@
 <resources>
     <string name="app_name">ToolBox</string>
+    <string name="checkbox1">Check 1</string>
+    <string name="checkbox2">Check 2</string>
+    <string name="checkbox3">Check 3</string>
+    <string name="radiobtn1">Radio 1</string>
+    <string name="radiobtn2">Radio 2</string>
+    <string name="radiobtn3">Radio 3</string>
+    <string name="switch1">Switch</string>
+    <string name="spinner1">Change Pic</string>
     <string-array name="spinnerEx">
-        <item>One</item>
-        <item>Two</item>
-        <item>Three</item>
+        <item>Picture 1</item>
+        <item>Picture 2</item>
+        <item>Picture 3</item>
     </string-array>
 </resources>

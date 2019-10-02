@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="verticalPadding">20dp</dimen>
+    <dimen name="horizontalPadding">20dp</dimen>
+    <dimen name="nextItemMargin">10dp</dimen>
+    <dimen name="itemWidth">120dp</dimen>
+    <dimen name="itemHeight">35dp</dimen>
+    <dimen name="textWidth">300dp</dimen>
+    <dimen name="textHeight">45dp</dimen>
+    <dimen name="imageHeight">120dp</dimen>
+    <dimen name="imageWidth">70dp</dimen>
+
+</resources>
